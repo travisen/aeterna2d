@@ -1,0 +1,6 @@
+optipng -clobber -strip all <file1.png> <file2.png> ...
+
+
+Use this tool on any PNG files that cause a "iCCP: known incorrect sRGB profile" error.
+http://docs.godotengine.org/en/stable/learning/workflow/assets/managing_image_files.html?highlight=iCCP
+

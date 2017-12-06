@@ -1,14 +1,22 @@
-extends Sprite
+extends KinematicBody2D
 
-var speed = 1
+# class member variables go here, for example:
+# var a = 2
+# var b = "textvar"
+const GRAVITY = 0
+
 var vel = Vector2()
-
 var turn = .05
 var rot = get_rot()
+var speed = 10
 
-func _ready():	set_process(true)
-
-func _process(delta):
+func _ready():
+	# Called every time the node is added to the scene.
+	# Initialization here
+	set_fixed_process(true)
+	
+	pass
+func _fixed_process(delta):
 
 	if Input.is_key_pressed(KEY_RIGHT) || Input.is_key_pressed(KEY_D):
 		set_rot(get_rot() - turn)
@@ -28,7 +36,12 @@ func _process(delta):
 		#vel = Vector2(sin(rot), cos(rot)) * speed;
 		if speed > 10:
 			speed -= 5
-		#print (get_pos())
-	#print (vel)
-	#print("speed: ", speed)
-	set_pos(get_pos() + vel * delta)
+	
+	#var motion = speed * delta
+	vel = move(vel)
+
+	if (is_colliding()):
+		var n = get_collision_normal()
+		vel = n.slide(vel)
+		#vel = n.slide(vel)
+		move(vel)

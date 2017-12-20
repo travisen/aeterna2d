@@ -1,12 +1,19 @@
+<<<<<<< HEAD
 [gd_scene load_steps=11 format=1]
+=======
+[gd_scene load_steps=8 format=1]
+>>>>>>> 333badf4f7dee16f1b27456b4b6253117ff650c0
 
 [ext_resource path="res://Ship.gd" type="Script" id=1]
 [ext_resource path="res://art/ships/3.png" type="Texture" id=2]
 [ext_resource path="res://art/background/background1.png" type="Texture" id=3]
 [ext_resource path="res://Collision.gd" type="Script" id=4]
 [ext_resource path="res://art/spaceMeteors_001.tex" type="Texture" id=5]
+<<<<<<< HEAD
 [ext_resource path="res://Station.gd" type="Script" id=6]
 [ext_resource path="res://art/spaceStation_018.tex" type="Texture" id=7]
+=======
+>>>>>>> 333badf4f7dee16f1b27456b4b6253117ff650c0
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 
@@ -16,12 +23,16 @@ points = Vector2Array( 0, -10, 8.66025, 5, -8.66025, 5 )
 [sub_resource type="CircleShape2D" id=2]
 
 custom_solver_bias = 0.0
+<<<<<<< HEAD
 radius = 10.1427
 
 [sub_resource type="RectangleShape2D" id=3]
 
 custom_solver_bias = 0.0
 extents = Vector2( 8.235, 2.97345 )
+=======
+radius = 10.0
+>>>>>>> 333badf4f7dee16f1b27456b4b6253117ff650c0
 
 [node name="SceneRoot" type="Node2D"]
 
@@ -150,6 +161,7 @@ shape = SubResource( 2 )
 trigger = true
 _update_shape_index = 0
 
+<<<<<<< HEAD
 [node name="Station" type="Area2D" parent="."]
 
 transform/pos = Vector2( 809.519, 599.888 )
@@ -177,10 +189,15 @@ shape = SubResource( 3 )
 trigger = true
 _update_shape_index = 0
 
+=======
+>>>>>>> 333badf4f7dee16f1b27456b4b6253117ff650c0
 [connection signal="area_enter" from="Ship/Area2D" to="Ship" method="_on_Area2D_area_enter"]
 
 [connection signal="area_enter" from="Asteroid" to="Asteroid" method="_on_Asteroid_area_enter"]
 
+<<<<<<< HEAD
 [connection signal="area_enter" from="Station" to="Station" method="_on_Station_area_enter"]
 
+=======
+>>>>>>> 333badf4f7dee16f1b27456b4b6253117ff650c0
 
